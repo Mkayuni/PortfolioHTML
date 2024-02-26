@@ -1,0 +1,114 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Set background color */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden !important;
+}
+
+header, footer {
+  background-color: #333; /* Header and footer background color */
+  color: #fff; /* Text color for header and footer */
+  text-align: center;
+  padding: 1em;
+  width: 100%; /* Occupy full width */
+  overflow-x: hidden !important;
+}
+
+main {
+  padding: 20px; /* Add padding to the main content */
+  min-height: 100vh; /* Ensure the main content fills the viewport height */
+  display: flex; /* Use flexbox to arrange content */
+  flex-direction: column; /* Arrange content vertically */
+}
+
+.menu-container {
+  flex-grow: 1; /* Allow menu container to grow and fill available space */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds container height */
+}
+
+section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Add a larger image */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Center the image */
+}
+
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 3px; /* Roundness of the scrollbar handle */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change color on hover */
+}
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  section {
+    max-width: 100%; /* Set the maximum width to 100% on smaller screens */
+    overflow-x: hidden !important;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project img {
+    width: 100%; /* Make images cover the entire width of the viewport */
+    margin: 0; /* Remove margin to ensure images fill the entire width */
+  }
+
+  .project-description {
+    width: 100%; /* Make description cover the entire width of the screen */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+
+  .buttons {
+    width: 100%; /* Make buttons cover the entire width of the screen */
+    text-align: center; /* Center buttons on smaller screens */
+  }
+}

@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "name": "Your Name",
+        "title": "Web Developer | Designer",
+        "about": "Welcome to my portfolio! I am a passionate web developer and designer with a focus on creating user-friendly and visually appealing websites.",
+        "skills": [
+            { "name": "HTML5", "logo": "html5-logo.png" },
+            { "name": "CSS3", "logo": "css3-logo.png" },
+            { "name": "JavaScript", "logo": "javascript-logo.png" },
+            { "name": "React.js", "logo": "react-logo.png" },
+            { "name": "Bootstrap", "logo": "bootstrap-logo.png" }
+        ],
+        "projects": [
+            {
+                "id": 1,
+                "description": "",
+                "image": "images/LotoMalawi.jpeg",
+                "link": "https://example.com/project1"
+            },
+            {
+                "id": 2,
+                "description": "",
+                "image": "images/fifth.png",
+                "link": "https://example.com/project2"
+            },
+            {
+                "id": 3,
+                "description": "",
+                "image": "images/usi.png",
+                "link": "https://example.com/project1"
+            }
+        ],
+        "profileImage": "image/moses.jpg",
+        "contact": {
+            "id": 3,
+            "email": "kayunilow11@gmail.com",
+            "linkedin": "linkedin.com/in/moses-kayuni-7915709b"
+        }
+    }
+] 
