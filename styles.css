@@ -82,31 +82,3 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: #555; /* Change color on hover */
 }
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 768px) {
-  section {
-    max-width: 100%; /* Set the maximum width to 100% on smaller screens */
-  }
-
-  .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .project img {
-    width: 100%; /* Make images cover the entire width of the viewport */
-    margin: 0; /* Remove margin to ensure images fill the entire width */
-  }
-
-  .project-description {
-    width: 100%; /* Make description cover the entire width of the screen */
-    margin: 20px 0; /* Add margin for spacing */
-  }
-
-  .buttons {
-    width: 100%; /* Make buttons cover the entire width of the screen */
-    text-align: center; /* Center buttons on smaller screens */
-  }
-}
