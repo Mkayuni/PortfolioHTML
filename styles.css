@@ -1,3 +1,4 @@
+
 /* Reset some default browser styles */
 body, h1, h2, h3, p, ul {
   margin: 0;
@@ -81,4 +82,640 @@ body::-webkit-scrollbar-thumb {
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
     background: #555; /* Change color on hover */
+}
+
+ /* Add this CSS for the collapsible menu */
+ .header-content {
+  display: flex;
+  align-items: center;
+  position: relative; /* Add position relative to the header */
+}
+
+/* Adjust footer styles */
+footer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+footer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 10px; /* Add padding for spacing */
+  background-color: #fff; /* Add background color */
+}
+
+.copyright {
+  color: black;
+}
+
+.footer-content {
+  display: flex; /* Use flexbox for horizontal alignment */
+}
+
+#contact {
+  width: 35%; /* Adjust the width as needed */
+}
+
+.footer-content a {
+  margin-right: 5px; /* Add margin between logos */
+}
+
+footer .icon {
+  font-size: 24px; 
+}
+
+.copyright {
+  font-size: 18px; /* Adjust font size */
+  margin-top: 2px; /* Add margin between logos and copyright text */
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: #ff0000; /* Change color of the menu icon lines */
+  margin: 6px 0;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover div {
+  background-color: #fff; /* Change color of the menu icon lines on hover */
+}
+
+.menu-icon.open div:first-child {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.menu-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open div:last-child {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.menu {
+  position: -webkit-sticky;
+  top: 100%; /* Adjust top position to move the menu below the button */
+  left: 0;
+  background-color: #c53737; /* Change background color of the menu */
+  width: 250px; /* Adjust width of the menu */
+  z-index: 998;
+  display: none;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  /* Add hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+}
+
+/* Adjust the length of the lines to match the width of the menu */
+.menu a::before {
+  content: '';
+  display: block;
+  width: 100%; /* Match the width of the menu */
+  height: 1px;
+  background-color: #fff; /* Line color */
+  margin-bottom: 6px; /* Adjust spacing */
+}
+
+/* Hover effect for menu links */
+.menu a:hover {
+  background-color: #dad8da; /* Highlight background color on hover */
+  color: #ff0000; /* Change text color on hover */
+}
+
+.main-container {
+  margin-left: 0%; /* Adjust margin left to accommodate the menu */
+}
+
+.hidden {
+  display: none; /* Hide elements with the 'hidden' class */
+}
+.project-container {
+  display: flex;
+  flex-direction: column; /* Change flex-direction to column to stack projects vertically */
+  gap: 40px; /* Adjust the gap between projects */
+  align-items: center; /* Center projects horizontally */
+  padding: 20px; /* Add some padding to the project container */
+  width: 100%; /* Set width to 80% of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.project {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent; /* Set background color to transparent */
+  width: 100%; /* Set width to 100% of the container */
+  position: relative; /* Add position relative */
+}
+
+.project img {
+  width: 35%; /* Set width to 35% */
+  height: 300px; /* Set a fixed height for the image */
+  object-fit: cover; /* Maintain aspect ratio and cover entire space */
+  border: 1px solid; /* Add border to the image */
+  border-color: inherit; /* Inherit the border color from the parent */
+  border-radius: 4%; /* Ensure border radius matches parent */
+  transition: transform 0.3s ease;
+}
+
+.project-content {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  gap: 20px; /* Adjust the gap between image and description */
+}
+
+.project-description {
+  flex: 1; /* Take up remaining space */
+  margin-left: 1in; /* Add margin to the left of the description */
+}
+
+/* Add hover effect for the project image */
+
+
+/* Apply the pulsate animation on hover */
+.project-content:hover img {
+  animation: pulsate 1s infinite;
+}
+
+.project:nth-child(1) img {
+  border-color: #FF5733; /* Border color for the first project */
+}
+
+.project:nth-child(3) img {
+  border-color: #33FF57; /* Border color for the second project */
+}
+
+.project:nth-child(2) img {
+  border-color: #5900ff; /* Border color for the third project */
+}
+
+.project-divider {
+  border: 1px solid #ccc; /* Set border style and color */
+  width: 100%; /* Ensure divider spans the entire width */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.section-heading-border {
+  border: 0px solid rgb(56, 54, 54); /* Adjust the border thickness and color as needed */
+  padding: 10px; /* Add padding for spacing */
+  width: 100%;
+  margin-bottom: 20px; /* Add margin to separate the heading from the project content */
+  background-color: rgba(92, 90, 90, 0.418); /* Add background color with transparency */
+}
+
+.section-heading-border h2 {
+  margin: 0; /* Remove default margin for the heading */
+  color: rgb(10, 6, 6); /* Adjust text color to ensure readability */
+}
+
+@media screen and (max-width: 768px) {
+.project {
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+.section-heading-border h2 {
+  margin-bottom: 20px; /* Add margin at the bottom of the heading */
+}
+
+.project-content {
+  flex-direction: column; /* Display items in a column */
+  align-items: center; /* Center items horizontally */
+}
+
+.project img {
+  width: 100%; /* Make the image cover the entire width */
+  margin-bottom: 10px; /* Add margin at the bottom for spacing */
+}
+
+.project-description {
+  width: 100%; /* Adjust width as needed */
+  margin-top: 20px; /* Add margin at the top for spacing */
+  margin-left: 0; /* Reset margin-left */
+}
+
+.buttons {
+  width: 100%; /* Make buttons cover the entire width */
+  text-align: center; /* Center buttons */
+}
+
+.buttons .button-text {
+  display: block; /* Ensure button texts are displayed in block format */
+  margin-bottom: 10px; /* Add margin bottom for spacing between buttons */
+}
+
+.buttons button {
+  display: block; /* Ensure buttons are displayed in block format */
+  margin: 0 auto; /* Center buttons */
+}
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+.menu a {
+  font-size: 12px; /* Adjust the font size for smaller screens */
+}
+}
+
+.about-container {
+  display: flex;
+}
+
+.about-text {
+  flex: 1; /* Take up remaining space */
+  padding-right: 20px; /* Add some spacing between text and image */
+}
+
+.about-image {
+  flex: 1; /* Take up remaining space */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid rgb(31, 30, 30); /* Add a red border */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.about-heading-border {
+  border: 0px solid rgb(56, 54, 54); /* Adjust the border thickness and color as needed */
+  padding: 10px; /* Add padding for spacing */
+  width: 100%;
+  margin-bottom: 5px; /* Add margin to separate the heading from the text */
+  background-color: rgba(190, 187, 187, 0.979); /* Add background color with transparency */
+}
+
+.about-heading-border h2 {
+  margin: 0; /* Remove default margin for the heading */
+  color: rgb(7, 7, 7); /* Adjust text color to ensure readability */
+}
+
+/* Toggle switch styles */
+.toggle-switch {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-top: 80px;
+}
+
+.toggle-switch span {
+  margin: 0 3px; /* Add horizontal margin */
+}
+
+.toggle-switch span:first-child {
+  margin-right: 3px; /* Add additional margin to the right of the first label */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+      flex-direction: column; /* Display items in a column */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text within the container */
+  }
+
+  .about-image {
+      width: 100%; /* Make the image cover the entire width */
+      max-width: none; /* Remove the maximum width constraint */
+      margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  }
+
+  .about-text {
+      width: 100%; /* Adjust width as needed */
+      margin-top: 20px; /* Add margin at the top for spacing */
+      margin-right: 0; /* Reset margin-right */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project img,
+  .about-image img {
+      max-width: 100%; /* Make images responsive */
+  }
+
+  .project-description,
+  .about-text {
+      width: 100%; /* Make text content responsive */
+      margin: 10px 0; /* Adjust margin for smaller screens */
+  }
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+section {
+  max-width: 100%; /* Set the maximum width to 100% on smaller screens */
+}
+
+body {
+  overflow-x: hidden !important; /* Disable horizontal scrolling on smaller screens */
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project img {
+  width: 100%; /* Make images cover the entire width of the viewport */
+  margin: 0; /* Remove margin to ensure images fill the entire width */
+}
+
+.project-description {
+  width: 100%; /* Make description cover the entire width of the screen */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.buttons {
+  width: 100%; /* Make buttons cover the entire width of the screen */
+  text-align: center; /* Center buttons on smaller screens */
+}
+
+}
+
+  iframe {
+      width: 100%; /* Make iframes responsive */
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Styling for the contact form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Adjust width of the form */
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Added styles for the buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+} 
+
+.buttons .button-text {
+  padding: 14px 12px;
+  background-color: #f0f0f0; /* Background color for the square box */
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.buttons button {
+  display: inline-block;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 15px 14px; /* Add padding */
+  border-radius: 15px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.buttons button:hover {
+  background-color: #cc0000; /* Background color on hover for the "Source" button */
+}
+
+.buttons .button-text:hover {
+  background-color: #e0e0e0; /* Background color on hover for the square box buttons */
+}
+
+.section-divider {
+  border: 1px solid #ccc; /* Set border style and color */
+  width: 100%; /* Ensure divider spans the entire width */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px; /* Set height for the textarea */
+}
+
+button[type="submit"] {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff3333;
+}
+#skills {
+  background-color: transparent; /* Set background color to transparent */
+}
+
+/* Adjusted skills section */
+#skills ul {
+  display: grid;
+  grid-template-rows: auto auto; /* Two rows with automatic height */
+  grid-template-columns: repeat(4, 1fr); /* Four columns with equal width */
+  gap: 3px; /* Spacing between grid items */
+  list-style: none; /* Remove default list styles */
+}
+
+
+
+.skill-item img,
+.project-content img {
+  max-width: 100%; /* Ensure images don't exceed viewport width */
+}
+
+iframe {
+  max-width: 100%; /* Ensure iframes don't exceed viewport width */
+}
+
+#skills li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#skills img {
+  width: 150px; /* Set the width of the images */
+  height: 80px; /* Let the height adjust automatically to maintain aspect ratio */
+  margin-right: 3px; /* Add some spacing between the images */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color properties */
+  background-color: #fff; /* Set background color to white */
+  border-radius: 5px; /* Add some border radius for rounded corners */
+  padding: 5px; /* Add padding to create space around the images */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.skill-item {
+  position: relative; /* Set position to relative */
+  display: inline-block; /* Make it inline-block to contain the image and text */
+}
+
+.skill-item img {
+  width: 100px; /* Set the width of the images */
+  height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+  margin-right: 10px; /* Add some spacing between the images and text */
+  background-color: #fff; /* Set background color to white */
+  border-radius: 5px; /* Add some border radius for rounded corners */
+  padding: 5px; /* Add padding to create space around the images */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.skill-item span {
+  position: absolute; /* Set position to absolute */
+  bottom: 5px; /* Adjust as needed to position the text */
+  left: 50%; /* Position the text in the center */
+  transform: translateX(-50%); /* Center the text horizontally */
+  background-color: #fff; /* Set background color to white */
+  padding: 3px 6px; /* Add padding to the text */
+  border-radius: 3px; /* Add border radius for rounded corners */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+@media screen and (max-width: 768px) {
+  #skills ul {
+      grid-template-columns: repeat(2, 1fr); /* 3 columns with equal width */
+  }
+
+  .skill-item {
+      width: 100%; /* Set the width to occupy half the container */
+      box-sizing: border-box; /* Include padding and border in the width */
+      padding: 7px; /* Add padding for spacing */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #contact-form {
+      width: 100%; /* Make the form width 100% */
+  }
+
+  #contact-form .form-group {
+      width: 100%; /* Make the form group width 100% */
+  }
+
+  #contact-form label {
+      display: block; /* Ensure labels are displayed in block format */
+      margin-bottom: 5px; /* Add margin bottom for spacing between labels */
+  }
+
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form textarea {
+      width: 100%; /* Make input and textarea width 100% */
+  }
+
+  #contact-form button[type="submit"] {
+      width: 100%; /* Make button width 100% */
+  }
+}
+
+#resume-button {
+  background-color: #0d7bbb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add margin on top */
+  margin-bottom: 10px;
+}
+
+#resume-button:hover {
+  background-color: #5fd1af;
+}
+
+body {
+  background-color: #fff; /* Set background color to white */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
