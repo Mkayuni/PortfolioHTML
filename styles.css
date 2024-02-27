@@ -10,7 +10,7 @@ body {
   padding: 0;
   background-color: #fff; /* Set background color */
   overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden !important;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 header, footer {
@@ -19,7 +19,6 @@ header, footer {
   text-align: center;
   padding: 1em;
   width: 100%; /* Occupy full width */
-  overflow-x: hidden !important;
 }
 
 main {
@@ -87,7 +86,6 @@ body::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 768px) {
   section {
     max-width: 100%; /* Set the maximum width to 100% on smaller screens */
-    overflow-x: hidden !important;
   }
 
   .project {
