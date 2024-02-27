@@ -34,6 +34,8 @@ main {
   overflow-y: auto; /* Enable vertical scrolling when content exceeds container height */
 }
 
+/*section adjustments */
+
 section {
   max-width: 1000px;
   margin: 20px auto;
@@ -41,6 +43,36 @@ section {
   background-color: #fff;
   border-radius: 8px;
 }
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller devices */
+  .container {
+    width: 100% !important; /* Set the width to 100% to prevent overflow */
+    max-width: none !important; /* Remove any maximum width constraint */
+  }
+
+  /* Ensure no horizontal scrolling */
+  body,
+  header {
+    overflow-x: hidden !important;
+  }
+
+  /* Adjust other elements as needed */
+  /* For example:
+  img {
+    max-width: 100%; /* Ensure images don't exceed viewport width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* CSS for smaller devices */
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    .header-content {
+        /* Example: Reduce padding or margins */
+        padding: 10px !important;
+    }
+    /* Add more styles as needed */
+  }
 
 h1, h2, h3 {
   color: #333;
@@ -55,17 +87,9 @@ li {
   margin-bottom: 8px;
 }
 
-/* Add a larger image */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto; /* Center the image */
-}
-
 /* Custom scrollbar */
 body::-webkit-scrollbar {
-    width: 6px; /* Set the width of the scrollbar */
+    width: 1px; /* Set the width of the scrollbar */
 }
 
 /* Track */
@@ -76,7 +100,7 @@ body::-webkit-scrollbar-track {
 /* Handle */
 body::-webkit-scrollbar-thumb {
     background: #888; /* Color of the scrollbar handle */
-    border-radius: 3px; /* Roundness of the scrollbar handle */
+    border-radius: 1px; /* Roundness of the scrollbar handle */
 }
 
 /* Handle on hover */
@@ -126,7 +150,7 @@ footer .icon {
 }
 
 .copyright {
-  font-size: 18px; /* Adjust font size */
+  font-size: 16px; /* Adjust font size */
   margin-top: 2px; /* Add margin between logos and copyright text */
 }
 
@@ -136,9 +160,9 @@ footer .icon {
 
 .menu-icon div {
   width: 30px;
-  height: 3px;
+  height: 5px;
   background-color: #ff0000; /* Change color of the menu icon lines */
-  margin: 6px 0;
+  margin: 7px 0;
   transition: transform 0.3s ease;
 }
 
@@ -188,7 +212,7 @@ footer .icon {
   width: 100%; /* Match the width of the menu */
   height: 1px;
   background-color: #fff; /* Line color */
-  margin-bottom: 6px; /* Adjust spacing */
+  margin-bottom: 8px; /* Adjust spacing */
 }
 
 /* Hover effect for menu links */
@@ -246,11 +270,6 @@ footer .icon {
 /* Add hover effect for the project image */
 
 
-/* Apply the pulsate animation on hover */
-.project-content:hover img {
-  animation: pulsate 1s infinite;
-}
-
 .project:nth-child(1) img {
   border-color: #FF5733; /* Border color for the first project */
 }
@@ -271,9 +290,9 @@ footer .icon {
 
 .section-heading-border {
   border: 0px solid rgb(56, 54, 54); /* Adjust the border thickness and color as needed */
-  padding: 10px; /* Add padding for spacing */
+  padding: 4px; /* Add padding for spacing */
   width: 100%;
-  margin-bottom: 20px; /* Add margin to separate the heading from the project content */
+  margin-bottom: 60px; /* Add margin to separate the heading from the project content */
   background-color: rgba(92, 90, 90, 0.418); /* Add background color with transparency */
 }
 
@@ -437,14 +456,16 @@ input:checked + .slider:before {
   .about-container {
       flex-direction: column; /* Display items in a column */
       align-items: center; /* Center items horizontally */
-      text-align: center; /* Center text within the container */
+      text-align: left; /* Center text within the container */
   }
 
   .about-image {
       width: 100%; /* Make the image cover the entire width */
       max-width: none; /* Remove the maximum width constraint */
       margin-bottom: 20px; /* Add margin at the bottom for spacing */
+      float: left;
   }
+  
 
   .about-text {
       width: 100%; /* Adjust width as needed */
