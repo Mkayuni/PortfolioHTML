@@ -34,6 +34,8 @@ main {
   overflow-y: auto; /* Enable vertical scrolling when content exceeds container height */
 }
 
+/*section adjustments */
+
 section {
   max-width: 1000px;
   margin: 20px auto;
@@ -55,17 +57,9 @@ li {
   margin-bottom: 8px;
 }
 
-/* Add a larger image */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto; /* Center the image */
-}
-
 /* Custom scrollbar */
 body::-webkit-scrollbar {
-    width: 6px; /* Set the width of the scrollbar */
+    width: 1px; /* Set the width of the scrollbar */
 }
 
 /* Track */
@@ -76,7 +70,7 @@ body::-webkit-scrollbar-track {
 /* Handle */
 body::-webkit-scrollbar-thumb {
     background: #888; /* Color of the scrollbar handle */
-    border-radius: 3px; /* Roundness of the scrollbar handle */
+    border-radius: 1px; /* Roundness of the scrollbar handle */
 }
 
 /* Handle on hover */
@@ -126,7 +120,7 @@ footer .icon {
 }
 
 .copyright {
-  font-size: 18px; /* Adjust font size */
+  font-size: 16px; /* Adjust font size */
   margin-top: 2px; /* Add margin between logos and copyright text */
 }
 
@@ -136,9 +130,9 @@ footer .icon {
 
 .menu-icon div {
   width: 30px;
-  height: 3px;
+  height: 5px;
   background-color: #ff0000; /* Change color of the menu icon lines */
-  margin: 6px 0;
+  margin: 7px 0;
   transition: transform 0.3s ease;
 }
 
@@ -158,15 +152,6 @@ footer .icon {
   transform: rotate(45deg) translate(-5px, -5px);
 }
 
-.menu {
-  position: -webkit-sticky;
-  top: 100%; /* Adjust top position to move the menu below the button */
-  left: 0;
-  background-color: #c53737; /* Change background color of the menu */
-  width: 250px; /* Adjust width of the menu */
-  z-index: 998;
-  display: none;
-}
 
 .menu.active {
   display: block;
@@ -188,7 +173,7 @@ footer .icon {
   width: 100%; /* Match the width of the menu */
   height: 1px;
   background-color: #fff; /* Line color */
-  margin-bottom: 6px; /* Adjust spacing */
+  margin-bottom: 8px; /* Adjust spacing */
 }
 
 /* Hover effect for menu links */
@@ -204,6 +189,43 @@ footer .icon {
 .hidden {
   display: none; /* Hide elements with the 'hidden' class */
 }
+
+
+.about-container {
+  display: flex;
+}
+
+.about-text {
+  flex: 1; /* Take up remaining space */
+  padding-right: 20px; /* Add some spacing between text and image */
+}
+
+.about-image {
+  flex: 1; /* Take up remaining space */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid rgb(31, 30, 30); /* Add a red border */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.about-heading-border {
+  border: 0px solid rgb(56, 54, 54); /* Adjust the border thickness and color as needed */
+  padding: 10px; /* Add padding for spacing */
+  width: 100%;
+  margin-bottom: 5px; /* Add margin to separate the heading from the text */
+  background-color: rgba(190, 187, 187, 0.979); /* Add background color with transparency */
+}
+
+.about-heading-border h2 {
+  margin: 0; /* Remove default margin for the heading */
+  color: rgb(7, 7, 7); /* Adjust text color to ensure readability */
+}
+
+
 .project-container {
   display: flex;
   flex-direction: column; /* Change flex-direction to column to stack projects vertically */
@@ -246,11 +268,6 @@ footer .icon {
 /* Add hover effect for the project image */
 
 
-/* Apply the pulsate animation on hover */
-.project-content:hover img {
-  animation: pulsate 1s infinite;
-}
-
 .project:nth-child(1) img {
   border-color: #FF5733; /* Border color for the first project */
 }
@@ -271,97 +288,15 @@ footer .icon {
 
 .section-heading-border {
   border: 0px solid rgb(56, 54, 54); /* Adjust the border thickness and color as needed */
-  padding: 10px; /* Add padding for spacing */
+  padding: 4px; /* Add padding for spacing */
   width: 100%;
-  margin-bottom: 20px; /* Add margin to separate the heading from the project content */
+  margin-bottom: 60px; /* Add margin to separate the heading from the project content */
   background-color: rgba(92, 90, 90, 0.418); /* Add background color with transparency */
 }
 
 .section-heading-border h2 {
   margin: 0; /* Remove default margin for the heading */
   color: rgb(10, 6, 6); /* Adjust text color to ensure readability */
-}
-
-@media screen and (max-width: 768px) {
-.project {
-  margin-bottom: 20px; /* Add margin at the bottom for spacing */
-}
-
-.section-heading-border h2 {
-  margin-bottom: 20px; /* Add margin at the bottom of the heading */
-}
-
-.project-content {
-  flex-direction: column; /* Display items in a column */
-  align-items: center; /* Center items horizontally */
-}
-
-.project img {
-  width: 100%; /* Make the image cover the entire width */
-  margin-bottom: 10px; /* Add margin at the bottom for spacing */
-}
-
-.project-description {
-  width: 100%; /* Adjust width as needed */
-  margin-top: 20px; /* Add margin at the top for spacing */
-  margin-left: 0; /* Reset margin-left */
-}
-
-.buttons {
-  width: 100%; /* Make buttons cover the entire width */
-  text-align: center; /* Center buttons */
-}
-
-.buttons .button-text {
-  display: block; /* Ensure button texts are displayed in block format */
-  margin-bottom: 10px; /* Add margin bottom for spacing between buttons */
-}
-
-.buttons button {
-  display: block; /* Ensure buttons are displayed in block format */
-  margin: 0 auto; /* Center buttons */
-}
-}
-
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 768px) {
-.menu a {
-  font-size: 12px; /* Adjust the font size for smaller screens */
-}
-}
-
-.about-container {
-  display: flex;
-}
-
-.about-text {
-  flex: 1; /* Take up remaining space */
-  padding-right: 20px; /* Add some spacing between text and image */
-}
-
-.about-image {
-  flex: 1; /* Take up remaining space */
-}
-
-.about-image img {
-  max-width: 100%;
-  height: auto;
-  border: 2px solid rgb(31, 30, 30); /* Add a red border */
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.about-heading-border {
-  border: 0px solid rgb(56, 54, 54); /* Adjust the border thickness and color as needed */
-  padding: 10px; /* Add padding for spacing */
-  width: 100%;
-  margin-bottom: 5px; /* Add margin to separate the heading from the text */
-  background-color: rgba(190, 187, 187, 0.979); /* Add background color with transparency */
-}
-
-.about-heading-border h2 {
-  margin: 0; /* Remove default margin for the heading */
-  color: rgb(7, 7, 7); /* Adjust text color to ensure readability */
 }
 
 /* Toggle switch styles */
@@ -431,77 +366,6 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-@media screen and (max-width: 768px) {
-  .about-container {
-      flex-direction: column; /* Display items in a column */
-      align-items: center; /* Center items horizontally */
-      text-align: center; /* Center text within the container */
-  }
-
-  .about-image {
-      width: 100%; /* Make the image cover the entire width */
-      max-width: none; /* Remove the maximum width constraint */
-      margin-bottom: 20px; /* Add margin at the bottom for spacing */
-  }
-
-  .about-text {
-      width: 100%; /* Adjust width as needed */
-      margin-top: 20px; /* Add margin at the top for spacing */
-      margin-right: 0; /* Reset margin-right */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .project img,
-  .about-image img {
-      max-width: 100%; /* Make images responsive */
-  }
-
-  .project-description,
-  .about-text {
-      width: 100%; /* Make text content responsive */
-      margin: 10px 0; /* Adjust margin for smaller screens */
-  }
-
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 768px) {
-section {
-  max-width: 100%; /* Set the maximum width to 100% on smaller screens */
-}
-
-body {
-  overflow-x: hidden !important; /* Disable horizontal scrolling on smaller screens */
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.project img {
-  width: 100%; /* Make images cover the entire width of the viewport */
-  margin: 0; /* Remove margin to ensure images fill the entire width */
-}
-
-.project-description {
-  width: 100%; /* Make description cover the entire width of the screen */
-  margin: 20px 0; /* Add margin for spacing */
-}
-
-.buttons {
-  width: 100%; /* Make buttons cover the entire width of the screen */
-  text-align: center; /* Center buttons on smaller screens */
-}
-
-}
-
-  iframe {
-      width: 100%; /* Make iframes responsive */
-  }
 }
 
 .container {
@@ -608,7 +472,6 @@ button[type="submit"]:hover {
 }
 
 
-
 .skill-item img,
 .project-content img {
   max-width: 100%; /* Ensure images don't exceed viewport width */
@@ -659,43 +522,6 @@ iframe {
   padding: 3px 6px; /* Add padding to the text */
   border-radius: 3px; /* Add border radius for rounded corners */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-}
-
-@media screen and (max-width: 768px) {
-  #skills ul {
-      grid-template-columns: repeat(2, 1fr); /* 3 columns with equal width */
-  }
-
-  .skill-item {
-      width: 100%; /* Set the width to occupy half the container */
-      box-sizing: border-box; /* Include padding and border in the width */
-      padding: 7px; /* Add padding for spacing */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #contact-form {
-      width: 100%; /* Make the form width 100% */
-  }
-
-  #contact-form .form-group {
-      width: 100%; /* Make the form group width 100% */
-  }
-
-  #contact-form label {
-      display: block; /* Ensure labels are displayed in block format */
-      margin-bottom: 5px; /* Add margin bottom for spacing between labels */
-  }
-
-  #contact-form input[type="text"],
-  #contact-form input[type="email"],
-  #contact-form textarea {
-      width: 100%; /* Make input and textarea width 100% */
-  }
-
-  #contact-form button[type="submit"] {
-      width: 100%; /* Make button width 100% */
-  }
 }
 
 #resume-button {
