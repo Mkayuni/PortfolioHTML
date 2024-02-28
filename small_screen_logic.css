@@ -1,164 +1,142 @@
 @media screen and (max-width: 768px) {
     /* Adjust container */
     .container {
-      width: 100% !important;
-      max-width: none !important;
+        width: 100% !important;
+        max-width: none !important;
     }
-  
+
     /* Ensure no horizontal scrolling */
     body,
     header {
-      overflow-x: hidden !important;
+        overflow-x: hidden !important;
     }
-  
+
     /* Adjust header content */
     .header-content {
-      padding: 10px !important;
+        padding: 10px !important;
     }
-  
+
     /* Adjust project */
     .project {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-  
+
     .section-heading-border h2 {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-  
+
     .project-content {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .project img {
-      width: 100%;
-      margin-bottom: 10px;
+        width: 100%;
+        margin-bottom: 10px;
     }
-  
+
     .project-description {
-      width: 100%;
-      margin-top: 20px;
-      margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
     }
-  
+
+    /* Adjust buttons */
     .buttons {
-      width: 100%;
-      text-align: center;
+        width: 100%;
+        text-align: center;
     }
-  
+
     .buttons .button-text {
-      display: block;
-      margin-bottom: 10px;
+        display: block;
+        margin-bottom: 10px;
     }
-  
+
     .buttons button {
-      display: block;
-      margin: 0 auto;
+        display: block;
+        margin: 0 auto;
     }
-  
+
     /* Adjust menu */
     .menu a {
-      font-size: 10px;
+        font-size: 10px;
     }
-  
+
     /* Adjust about container */
     .about-container {
-      display: flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
     }
-  
+
     .about-text {
-      flex: 1;
-      padding-right: 20px;
+        flex: 1;
+        padding-right: 20px;
+        width: 100%;
+        margin-top: 20px;
+        margin-right: 0;
     }
-  
+
     .about-image {
-      flex: 1;
+        flex: 1;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+        float: left;
     }
-  
+
     .about-image img {
-      max-width: 100%;
-      height: auto;
-      border: 2px solid rgb(31, 30, 30);
-      border-radius: 5px;
-      padding: 5px;
+        max-width: 100%;
+        height: auto;
+        border: 2px solid rgb(31, 30, 30);
+        border-radius: 5px;
+        padding: 5px;
     }
-  
+
     .about-heading-border {
-      border: 0px solid rgb(56, 54, 54);
-      padding: 10px;
-      width: 100%;
-      margin-bottom: 5px;
-      background-color: rgba(190, 187, 187, 0.979);
+        border: 0px solid rgb(56, 54, 54);
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 5px;
+        background-color: rgba(190, 187, 187, 0.979);
     }
-  
+
     .about-heading-border h2 {
-      margin: 0;
-      color: rgb(7, 7, 7);
+        margin: 0;
+        color: rgb(7, 7, 7);
     }
-  
-    .about-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
-    }
-  
-    .about-image {
-      width: 100%;
-      max-width: none;
-      margin-bottom: 20px;
-      float: left;
-    }
-  
-    .about-text {
-      width: 100%;
-      margin-top: 20px;
-      margin-right: 0;
-    }
-  
+
     /* Adjust sections and iframe */
     section,
     iframe {
-      max-width: 100%;
+        max-width: 100%;
     }
-  
+
     /* Adjust skills */
     #skills ul {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-  
+
     .skill-item {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 7px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 7px;
     }
-  
+
     /* Adjust contact form */
-    #contact-form {
-      width: 100%;
-    }
-  
-    #contact-form .form-group {
-      width: 100%;
-    }
-  
-    #contact-form label {
-      display: block;
-      margin-bottom: 5px;
-    }
-  
+    #contact-form,
+    #contact-form .form-group,
+    #contact-form label,
     #contact-form input[type="text"],
     #contact-form input[type="email"],
-    #contact-form textarea {
-      width: 100%;
-    }
-  
+    #contact-form textarea,
     #contact-form button[type="submit"] {
-      width: 100%;
+        width: 100%;
     }
-  }
 
-
-
-
-
-
+    #contact-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
