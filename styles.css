@@ -14,7 +14,7 @@ body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-header, footer {
+footer {
   background-color: #333; /* Header and footer background color */
   color: #fff; /* Text color for header and footer */
   text-align: center;
@@ -152,6 +152,15 @@ footer .icon {
   transform: rotate(45deg) translate(-5px, -5px);
 }
 
+.menu {
+  position: -webkit-sticky;
+  top: 100%; /* Adjust top position to move the menu below the button */
+  left: 0;
+  background-color: #c53737; /* Change background color of the menu */
+  width: 250px; /* Adjust width of the menu */
+  z-index: 998;
+  display: none;
+}
 
 .menu.active {
   display: block;
