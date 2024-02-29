@@ -19,6 +19,7 @@ header, footer {
   color: #fff; /* Text color for header and footer */
   text-align: center;
   width: 100%; /* Occupy full width */
+  padding: 10px 0; /* Adjust the padding to increase height */
 }
 
 main {
@@ -124,13 +125,13 @@ footer .icon {
 
 .menu-icon {
   cursor: pointer;
+  margin-left: 10px; /* Add margin to the left of the menu icon */
 }
-
 .menu-icon div {
-  width: 30px;
-  height: 5px;
-  background-color: #ff0000; /* Change color of the menu icon lines */
-  margin: 7px 0;
+  width: 20px; /* Adjusted width for the menu icon lines */
+  height: 3px; /* Adjusted height for the menu icon lines */
+  background-color: #fff; /* Change color of the menu icon lines */
+  margin: 5px 0; /* Adjusted margin for spacing */
   transition: transform 0.3s ease;
 }
 
@@ -153,11 +154,16 @@ footer .icon {
 .menu {
   position: -webkit-sticky;
   top: 100%; /* Adjust top position to move the menu below the button */
-  left: 0;
-  background-color: #c53737; /* Change background color of the menu */
+  left: 15px;
+  background-color: #215ee2; /* Change background color of the menu */
   width: 250px; /* Adjust width of the menu */
   z-index: 998;
   display: none;
+  padding-top: 20px; /* Add padding to the top of the menu */
+  padding-bottom: 10px; /* Add padding to the bottom of the menu */
+  padding-bottom: 10px; /* Add padding to the bottom of the menu */
+  margin-top: 10px; /* Add margin to the top of the menu */
+  margin-bottom: 10px;
 }
 
 .menu.active {
@@ -186,7 +192,7 @@ footer .icon {
 /* Hover effect for menu links */
 .menu a:hover {
   background-color: #dad8da; /* Highlight background color on hover */
-  color: #ff0000; /* Change text color on hover */
+  color: #510ecf; /* Change text color on hover */
 }
 
 .main-container {
