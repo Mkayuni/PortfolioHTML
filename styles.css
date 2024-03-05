@@ -502,8 +502,8 @@ iframe {
 }
 
 #skills img {
-  width: 150px; /* Set the width of the images */
-  height: 80px; /* Let the height adjust automatically to maintain aspect ratio */
+  width: 100px; /* Set the width of the images */
+  height: 70px; /* Let the height adjust automatically to maintain aspect ratio */
   margin-right: 3px; /* Add some spacing between the images */
   transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color properties */
   background-color: #fff; /* Set background color to white */
@@ -529,7 +529,7 @@ iframe {
 
 .skill-item span {
   position: absolute; /* Set position to absolute */
-  bottom: 5px; /* Adjust as needed to position the text */
+  bottom: -5px; /* Adjust as needed to position the text */
   left: 50%; /* Position the text in the center */
   transform: translateX(-50%); /* Center the text horizontally */
   background-color: #fff; /* Set background color to white */
