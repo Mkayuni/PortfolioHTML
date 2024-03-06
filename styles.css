@@ -9,13 +9,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff; /* Set background color */
+  background-color: #807e7e; /* Set background color */
   overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 header, footer {
-  background-color: #333; /* Header and footer background color */
+  background-color: #272626; /* Header and footer background color */
   color: #fff; /* Text color for header and footer */
   text-align: center;
   width: 100%; /* Occupy full width */

@@ -1,5 +1,4 @@
 
-
 // Function to clear form fields
 function clearFormFields() {
     document.getElementById("name").value = "";
