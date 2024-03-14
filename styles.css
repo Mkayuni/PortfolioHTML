@@ -433,6 +433,7 @@ input:checked + .slider:before {
   background-color: #e0e0e0; /* Background color on hover for the square box buttons */
 }
 
+
 .section-divider {
   border: 1px solid #ccc; /* Set border style and color */
   width: 100%; /* Ensure divider spans the entire width */
