@@ -1,0 +1,55 @@
+/* src/components/header.css */
+.MuiPaper-root {
+    background-color: #fff; /* Change background color if needed */
+}
+
+.MuiMenuItem-root {
+    font-size: 1.2rem; /* Increase font size */
+    padding: 20px; /* Increase padding */
+    text-align: center; /* Center the text */
+}
+
+.menu-container {
+    background-color: #000000 !important; /* Dark background color for the menu */
+}
+
+.menu-item {
+    font-size: 1.2rem;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    justify-content: center; /* Center the text */
+    display: flex; /* Ensure flex display */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    color: #0066ff; /* Change the color on hover */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) { /* For tablets and smaller */
+    .menu-item {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 768px) { /* For small screens */
+    .menu-item {
+        width: 100vw;
+    }
+}
+
+.header-signature {
+    font-family: 'Quentin', cursive;
+    font-size: 24px;
+    color: white;
+    margin-left: 0.5cm;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}

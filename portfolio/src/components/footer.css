@@ -1,0 +1,17 @@
+/* src/components/footer.css */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.footer-content a {
+  margin: 0 10px;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  border: none;
+  color: inherit; /* Ensure it uses the inherited color from the parent */
+}
