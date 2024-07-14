@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -11,7 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import './header.css'; // Import the CSS file
-import { useTheme as useAppTheme, ThemeContext } from '../contexts/ThemeContext';
+import { useTheme as useAppTheme } from '../contexts/ThemeContext';
 
 const Header = ({ toggleSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,6 +19,14 @@ const Header = ({ toggleSection }) => {
   const { theme: appTheme, toggleTheme } = useAppTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const isTabletScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [menuOpen]);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);

@@ -75,7 +75,7 @@ const Projects = () => {
                   >
                     {project.title}
                   </Typography>
-                  <Typography variant="body1" color="textSecondary" paragraph style={{ textAlign: 'justify' }}>
+                  <Typography variant="body1" color="textSecondary" paragraph className="project-description">
                     {project.description}
                   </Typography>
                   <Box my={2}>
@@ -122,7 +122,7 @@ const Projects = () => {
                   >
                     {project.title}
                   </Typography>
-                  <Typography variant="body1" color="textSecondary" paragraph style={{ textAlign: 'justify' }}>
+                  <Typography variant="body1" color="textSecondary" paragraph className="project-description">
                     {project.description}
                   </Typography>
                   <Box my={2}>
