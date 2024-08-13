@@ -46,7 +46,7 @@ const Home = () => {
         </Grid>
       </Box>
       <Box textAlign="center" my={4}>
-        <Button variant="contained" color="primary" onClick={() => window.open('https://drive.google.com/file/d/1AX4I3C_fztSOthmQ_X39NO3xtf14zN3p/view', '_blank')} className="resume-button">
+        <Button variant="contained" color="primary" onClick={() => window.open('https://drive.google.com/file/d/1l_doaljnplpQYjAUv89f5QNJ78Qmu_Mm/view?usp=sharing')} className="resume-button">
           Download Resume
         </Button>
         <iframe
