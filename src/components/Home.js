@@ -50,7 +50,7 @@ const Home = () => {
           Download Resume
         </Button>
         <iframe
-          src="https://drive.google.com/file/d/1AX4I3C_fztSOthmQ_X39NO3xtf14zN3p/preview"
+          src="https://drive.google.com/file/d/1l_doaljnplpQYjAUv89f5QNJ78Qmu_Mm/preview"
           width="100%"
           height="700px"
           className="resume-iframe"
