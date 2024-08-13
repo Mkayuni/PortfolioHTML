@@ -74,6 +74,7 @@ const Home = () => {
           width="100%"
           height="700px"
           className="resume-iframe"
+          title="Resume Preview"
         ></iframe>
       </Container>
     </div>

@@ -11,7 +11,7 @@ body {
 }
 
 .hero-container {
-    background-image: url('/public/images/one.jpeg');  
+    background-image: url('/public/images/acd.avif');  /* Ensure the correct image path with a query string */
     background-size: cover;
     background-position: center;
     width: 100%; /* Ensure the image container covers the full width */
@@ -26,13 +26,14 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    animation: fadeIn 1.5s ease-in-out;
+    transition: none; /* Disable transition to prevent movement */
+    animation: none; /* Disable animation to prevent movement */
     max-width: 800px;
 }
 
+/* Remove hover effect that causes movement */
 .intro-container:hover {
-    transform: translateY(-10px);
+    transform: none;
 }
 
 /* Force black text color for title, subtitle, and description in all modes */

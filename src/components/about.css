@@ -1,172 +1,109 @@
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.home-wrapper {
-  min-height: 100vh;
+.about-container {
   display: flex;
   flex-direction: column;
-}
-
-.hero-container {
-  background-image: url('/public/images/one.jpeg');  
-  background-size: cover;
-  background-position: center;
-  width: 100%; /* Ensure the image container covers the full width */
-  height: 70vh; /* Adjust for the height of the hero section */
-  display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 40px; /* Adds space between hero and skills section */
+  align-items: center;
 }
 
-.intro-container {
-  background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
-  animation: fadeIn 1.5s ease-in-out;
-  max-width: 800px;
-  margin-bottom: 40px; /* Adds space between intro and skills section */
-}
-
-.intro-container:hover {
-  transform: translateY(-10px);
-}
-
-/* Force black text color for title, subtitle, and description in all modes */
-.intro .title,
-.intro .subtitle,
-.intro .description {
-  color: #2c3e50 !important; /* Force black text color */
-  font-weight: bold; /* Ensure text visibility */
-}
-
-/* Skills section styles */
-.skills-section {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 1200px; /* Constrains the width of the skills section */
-  margin: 40px auto; /* Centers the skills section and adds top margin */
-  transition: background-color 0.3s ease;
-}
-
-/* Dark mode for skills section */
-body.dark-mode .skills-section {
-  background-color: #1e1e1e; /* Dark background similar to the About section */
-  color: #fff; /* Text color for dark mode */
-}
-
-.skills-title {
-  font-size: 2.5rem;
+.about-title {
   font-weight: bold;
-  color: #2c3e50;
-  text-align: center;
+  color: #1976d2;
   margin-bottom: 40px;
 }
 
-body.dark-mode .skills-title {
-  color: #fff; /* Text color for dark mode */
-}
-
-.skill-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, background-color 0.3s;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Dark mode for skill cards */
-body.dark-mode .skill-card {
-  background-color: #2e2e2e; /* Darker background for skill cards */
-  color: #fff; /* Text color inside the skill cards */
-}
-
-.skill-card:hover {
-  transform: translateY(-10px);
-}
-
-.skill-avatar {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-}
-
-/* Dark mode for skill avatars (icons) */
-body.dark-mode .skill-avatar {
-  filter: brightness(0) invert(1); /* Invert icon colors for dark mode */
-}
-
-.skill-name {
-  font-size: 1.2rem;
-  color: #333; /* Keep text color dark */
-}
-
-/* Dark mode for skill name */
-body.dark-mode .skill-name {
-  color: #fff;
-}
-
-.resume-button {
-  font-size: 1.2rem;
-  padding: 12px 24px;
+.mode-switch {
+  align-self: flex-start;
   margin-bottom: 20px;
-  background-color: #0066ff;
-  color: #fff;
-  border-radius: 50px;
 }
 
-.resume-button:hover {
-  background-color: #0052cc;
+.mode-switch-label {
+  display: block;
+  text-align: center;
 }
 
-.resume-iframe {
+.text-container,
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  margin-top: 0; /* Align with the image container */
+  max-width: 600px; /* Set a max width for better readability */
+}
+
+.about-text {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.custom-card {
+  box-shadow: none;
   border: none;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1200px; /* Constrains the width of the resume section */
-  margin: 0 auto; /* Centers the resume section */
+}
+
+.custom-card-content {
+  padding: 16px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .about-container {
+    align-items: flex-start;
+  }
+
+  .text-container,
+  .image-container {
+    justify-content: flex-start;
+  }
+
+  .text-container {
+    margin-left: auto; /* Align with the image container */
+  }
+
+  .mode-switch {
+    align-self: flex-start;
+  }
+
+  .about-title,
+  .mode-switch-label {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .intro .title {
-      font-size: 2.8rem;
+  .about-container {
+    align-items: center;
   }
 
-  .intro .subtitle {
-      font-size: 1.8rem;
+  .text-container,
+  .image-container {
+    justify-content: center;
   }
 
-  .intro .description {
-      font-size: 1.1rem;
+  .mode-switch {
+    align-self: center;
   }
 
-  .skills-title {
-      font-size: 2rem;
+  .about-title,
+  .mode-switch-label {
+    text-align: center;
   }
+}
 
-  .skill-avatar {
-      width: 60px;
-      height: 60px;
-  }
+.personal-mode .MuiSwitch-switchBase.Mui-checked {
+  color: pink;
+}
 
-  .skill-name {
-      font-size: 1rem;
-  }
+.personal-mode .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: pink;
+}
 
-  .resume-button {
-      font-size: 1.2rem;
-      padding: 10px 20px;
-  }
+.recruiter-mode .MuiSwitch-switchBase.Mui-checked {
+  color: #1976d2;
+}
 
-  .resume-iframe {
-      height: 500px;
-  }
+.recruiter-mode .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: #1976d2;
 }
