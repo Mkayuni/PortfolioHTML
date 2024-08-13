@@ -26,14 +26,21 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: none; /* Disable transition to prevent movement */
-    animation: none; /* Disable animation to prevent movement */
+    transition: transform 0.3s; /* Enable transition for transform */
+    animation: fadeIn 1.5s ease-in-out; /* Re-enable animation if needed */
     max-width: 800px;
 }
 
-/* Remove hover effect that causes movement */
+/* Reintroduce the hover effect with transform */
 .intro-container:hover {
-    transform: none;
+    transform: translateY(-10px);
+}
+
+/* Ensure the container starts below the header on smaller screens */
+@media screen and (max-width: 768px) {
+    .intro-container {
+        margin-top: 80px; /* Adjust the value to fit the height of your header */
+    }
 }
 
 /* Force black text color for title, subtitle, and description in all modes */
@@ -164,7 +171,6 @@ body.dark-mode .skill-avatar {
     filter: invert(1); /* Invert the color of the icons for dark mode */
 }
 
-/* Optional: Add a hover effect in dark mode */
 body.dark-mode .skill-card:hover {
     background-color: #4b4b4b; /* Slightly lighter on hover */
     transform: translateY(-10px);
