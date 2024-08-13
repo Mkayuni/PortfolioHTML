@@ -50,7 +50,7 @@ const Header = ({ toggleSection }) => {
           onClick={handleMenuToggle}
           style={{ marginRight: '0.5cm' }}
         >
-          {menuOpen ? <CloseIcon sx={{ color: theme.palette.mode === 'light' ? '#000' : '#fff' }} /> : <MenuIcon sx={{ color: theme.palette.mode === 'light' ? '#000' : '#fff' }} />}
+          {menuOpen ? <CloseIcon sx={{ color: '#fff' }} /> : <MenuIcon sx={{ color: '#fff' }} />}
         </IconButton>
         <Typography className="header-signature">
           Kayuni Moses

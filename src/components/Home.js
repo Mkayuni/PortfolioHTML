@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, Button, Avatar } from '@mui/material';
-import WavingHandIcon from '@mui/icons-material/WavingHand'; // Example icon
+import { Box, Container, Typography, Grid, Button } from '@mui/material';
+import WavingHandIcon from '@mui/icons-material/WavingHand';
 import './home.css';
 
 const skills = [
@@ -16,21 +16,39 @@ const skills = [
 
 const Home = () => {
   return (
-    <Container>
-      <Box textAlign="center" my={4} className="intro">
-        <Box className="intro-container"> {/* Added Box for styling */}
-          <Typography variant="h2" component="h1" gutterBottom className="title">
+    <div className="home-wrapper">
+      <Box textAlign="center" className="hero-container">
+        <Box className="intro-container">
+          <Typography
+            variant="h2"
+            component="h1"
+            gutterBottom
+            sx={{ color: '#2c3e50 !important', fontWeight: 'bold' }}
+          >
             Hello, I'm Moses
           </Typography>
-          <Typography variant="h5" gutterBottom className="subtitle" display="flex" alignItems="center" justifyContent="center">
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ color: '#2c3e50 !important', fontWeight: 'bold' }}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
             Welcome to my Page <WavingHandIcon sx={{ ml: 1, color: 'primary.main', fontSize: '2rem' }} />
           </Typography>
-          <Typography variant="body1" paragraph className="description">
+          <Typography
+            variant="body1"
+            paragraph
+            sx={{ color: '#2c3e50 !important', fontWeight: 'bold' }}
+          >
             I am a software developer, with a versatile background encompassing an MBA in Data Analytics & Healthcare Administration, and I am currently pursuing a Master's in Computer Science. With experience as a Teaching Assistant and Business Analyst, I have mastered the art of blending business strategy with technical expertise. I am fervently committed to exploring innovative opportunities at the dynamic intersection of technology and business.
           </Typography>
         </Box>
       </Box>
-      <Box my={4}>
+
+      {/* Skills Section */}
+      <Container my={4} className="skills-section">
         <Typography variant="h4" component="h2" gutterBottom className="skills-title">
           Skills
         </Typography>
@@ -38,14 +56,16 @@ const Home = () => {
           {skills.map((skill, index) => (
             <Grid item xs={6} sm={4} md={3} key={index}>
               <Box display="flex" flexDirection="column" alignItems="center" className="skill-card">
-                <Avatar src={skill.image} alt={skill.name} variant="square" className="skill-avatar" />
+                <img src={skill.image} alt={skill.name} className="skill-avatar" />
                 <Typography variant="h6" className="skill-name">{skill.name}</Typography>
               </Box>
             </Grid>
           ))}
         </Grid>
-      </Box>
-      <Box textAlign="center" my={4}>
+      </Container>
+
+      {/* Resume Section */}
+      <Container textAlign="center" my={4}>
         <Button variant="contained" color="primary" onClick={() => window.open('https://drive.google.com/file/d/1l_doaljnplpQYjAUv89f5QNJ78Qmu_Mm/view?usp=sharing')} className="resume-button">
           Download Resume
         </Button>
@@ -55,8 +75,8 @@ const Home = () => {
           height="700px"
           className="resume-iframe"
         ></iframe>
-      </Box>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
